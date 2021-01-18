@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Weather App</h1>
-    <h2 id="city"></h2>
-    <div id="icon"></div>
-    <div id="weather"></div>
-    <div id="weatherDescription"></div>
-    <div id="temp"></div>
-    <div id="wind"></div>
-    <div id="visability"></div>
+    <!-- add city select -->
+    <!-- add icon update -->
 
-    <script src="data.js"></script>
+    <!-- add styling and improve layout using CSS BEM-->
+<div class="container">
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <input type="text" id="setCity" placeholder="Wellington, NZ">    
+    <h2 id="city"></h2>
+</div>
+    <div class="innerContainer">
+        <div id="weather"></div>
+        <div id="weatherDescription"></div>
+        <div id="temp"></div>
+        <div id="tempFeels"></div>
+        <div id="wind"></div>
+        <div id="visability"></div>
+    </div>
+    
     <script src="app.js"></script>
+    <script src="data.js"></script>
 </body>
 </html>
