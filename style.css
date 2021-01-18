@@ -15,7 +15,7 @@ div {
     border: 1.5px solid rgb(172, 172, 172);
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     padding-bottom: 150px;
     width: 60%;
     display: flex;
