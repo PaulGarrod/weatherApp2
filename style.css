@@ -43,3 +43,8 @@ input[placeholder] {
 }
 
 /* @media screen size < 580 .container && .innerContainer width: 95% */
+@media (max-width:580px) {
+    .container, .innerContainer {
+        width: 90%;
+    }
+}
