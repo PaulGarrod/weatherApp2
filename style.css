@@ -1,7 +1,8 @@
 body {
-    color:black;
+    color: rgb(35, 35, 35);
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Josefin Sans', sans-serif;
+
 }
 
 div { 
@@ -12,7 +13,7 @@ div {
 .container {
     background-position: center;
     background-size: cover;
-    border: 1.5px solid rgb(172, 172, 172);
+    border: 2px solid rgba(120, 150, 255, 0.5);
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
     margin: 40px auto 0;
@@ -27,7 +28,7 @@ div {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    border: 1.5px solid rgb(172, 172, 172);
+    border: 2px solid rgba(120, 150, 255, 0.5);
     width: 60%;
     background-color: rgba(186, 159, 247, 0.3);
     padding: 25px 0;
@@ -35,11 +36,10 @@ div {
 }
 
 input[placeholder] {
-    font-size: 1.2rem;
-}
-
-#weather {
-    font-size: 1.5rem;
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: lightblue;
 }
 
 /* @media screen size < 580 .container && .innerContainer width: 95% */

@@ -26,3 +26,4 @@ setCity.addEventListener('change', () => {
 newData(cityURL)
 
 renderData();
+

@@ -7,8 +7,8 @@ const visability = document.querySelector('#visability');
 const container = document.querySelector('.container');
 
 const weatherImages = {
-    clear: 'https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fGNsZWFyJTIwc2t5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    clouds: 'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3VkfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    clear: 'https://images.unsplash.com/photo-1558482623-d1507c001b57?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fHdlbGxpbmd0b24lMjBueiUyMHJhaW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    clouds: 'https://images.unsplash.com/photo-1566010503302-2564ae0d47b6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHdlbGxpbmd0b24lMjBjbG91ZHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     rain: 'https://images.unsplash.com/photo-1559234599-4119a32377d6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fHJhaW5pbmclMjB1bWJyZWxsYXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     thunderstorm: 'https://images.unsplash.com/photo-1510936723039-063b76afd29e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODJ8fHRodW5kZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     snow: 'https://images.unsplash.com/photo-1552426106-891da94e1cf1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHNub3d8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
@@ -23,7 +23,7 @@ const setImg = () => {
             container.style.backgroundImage = `url('${weatherImages.clouds}')`;
         } else if (data.weather[0].main.toLowerCase() === 'rain' || data.weather[0].main === 'drizzle'){
             container.style.backgroundImage = `url('${weatherImages.rain}')`;
-        } else if (data.weather[0].main.toLowerCase() === 'thunderstonrm'){
+        } else if (data.weather[0].main.toLowerCase() === 'thunderstorm'){
             container.style.backgroundImage = `url('${weatherImages.thunderstorm}')`;
         } else if (data.weather[0].main.toLowerCase() === 'snow'){
             container.style.backgroundImage = `url('${weatherImages.snow}')`;
@@ -37,8 +37,7 @@ const setImg = () => {
 
 const renderData = () => {
     getData().then((data) => {
-        city.innerText = `${data.name}, ${data.sys.country}`;
-        weather.innerText = `Current Weather: ${data.weather[0].main}`;
+        city.innerText = `${data.name}, ${data.sys.country}: ${data.weather[0].main}`;
         weatherDescription.innerText = `Description: ${data.weather[0].description}`;
         temp.innerText = `Temperature (Celsius): ${data.main.temp}`;
         tempFeels.innerText = `Feels like: ${data.main.feels_like}`;

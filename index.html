@@ -9,27 +9,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- add city select -->
-    <!-- add icon update -->
 
-    <!-- add styling and improve layout using CSS BEM-->
-<div class="container">
-    <header>
-        <h1>Weather App</h1>
-    </header>
-    <input type="text" id="setCity" placeholder="City, Country (optional)">    
-    <h2 id="city"></h2>
-</div>
+<header>
+    <div class="container">
+        <h1>Check the Weather</h1>
+        <h2 id="city"></h2>
+        <input type="text" id="setCity" placeholder="Choose your City">    
+    </div>
+</header>
+
+<main>
     <div class="innerContainer">
-        <div id="weather"></div>
         <div id="weatherDescription"></div>
         <div id="temp"></div>
         <div id="tempFeels"></div>
         <div id="wind"></div>
         <div id="visability"></div>
     </div>
+</main>
     
     <script src="app.js"></script>
     <script src="data.js"></script>
+    
 </body>
 </html>
