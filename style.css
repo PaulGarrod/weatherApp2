@@ -1,6 +1,6 @@
 body {
     color: rgb(35, 35, 35);
-    background-color: rgba(100, 120, 255, 0.3);
+    background-color: rgba(100, 120, 255, 0.2);
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -16,9 +16,10 @@ div {
     border: 2px solid rgba(120, 150, 255, 0.5);
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
-    margin: 40px auto 0;
-    padding-bottom: 150px;
-    width: 60%;
+    margin: 60px auto 0;
+    padding-bottom: 80px;
+    width: 55%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +30,8 @@ div {
     flex-direction: column;
     margin: 0 auto;
     border: 2px solid rgba(120, 150, 255, 0.5);
-    width: 60%;
+    width: 55%;
+    max-width: 500px;
     background-color: rgba(220, 220, 225);
     padding: 25px 0;
     align-items: center;
@@ -43,8 +45,8 @@ input[placeholder] {
 }
 
 /* @media screen size < 580 .container && .innerContainer width: 95% */
-@media (max-width:580px) {
+@media (max-width:750px) {
     .container, .innerContainer {
-        width: 90%;
+        width: 70%;
     }
 }
