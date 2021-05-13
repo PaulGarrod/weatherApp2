@@ -4,7 +4,7 @@ const weatherDescription = document.querySelector('#weatherDescription');
 const temp = document.querySelector('#temp');
 const wind = document.querySelector('#wind');
 const visability = document.querySelector('#visability');
-const container = document.querySelector('.container');
+const container = document.querySelector('main');
 
 const weatherImages = {
     clear: 'https://images.unsplash.com/photo-1558482623-d1507c001b57?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fHdlbGxpbmd0b24lMjBueiUyMHJhaW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',

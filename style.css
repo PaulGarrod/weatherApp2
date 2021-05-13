@@ -1,7 +1,6 @@
 body {
     color: rgb(35, 35, 35);
-    background-color: rgba(100, 120, 255, 0.3)
-    /* font-family: 'Roboto', sans-serif; */
+    background-color: rgba(205, 211, 253, 0.1);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -9,42 +8,59 @@ div {
     margin: 7px;
 }
 
-/* background-image: url('https://images.unsplash.com/photo-1491308056676-205b7c9a7dc1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fGNsZWFyJTIwc2t5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); */
-.container {
-    background-position: center;
-    background-size: cover;
-    border: 2px solid rgba(120, 150, 255, 0.5);
-    border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
-    margin: 40px auto 0;
-    padding-bottom: 150px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.outer-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    text-align: center;
+    margin-top: 100px;
 }
 
-.innerContainer {
+header {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    border: 2px solid rgba(120, 150, 255, 0.5);
-    width: 60%;
+}
+
+main {
+    border-radius: 5px;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
     background-color: rgba(220, 220, 225);
     padding: 25px 0;
     align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    background-color:rgba(255, 255, 255, 0.4);
 }
 
 input[placeholder] {
     padding: 5px;
     font-size: 1.1rem;
     border-radius: 5px;
-    border: lightblue;
+    border: rgba(65, 105, 225, 0.185) 2px solid;
 }
 
-/* @media screen size < 580 .container && .innerContainer width: 95% */
-@media (max-width:580px) {
-    .container, .innerContainer {
-        width: 90%;
+@media (max-width:650px) {
+    .outer-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .main-container {
+        width: 100%;
+        margin: 0;
+    }
+    main {
+        margin: 50px 0;
+        width: 100%;
+        height: 300px;
     }
 }
