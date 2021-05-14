@@ -15,22 +15,24 @@ const weatherImages = {
     mist: 'https://images.unsplash.com/photo-1510596713412-56030de252c8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
 }
 
+const whiteOverlay = "linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4))"
+
 const setImg = () => {
     getData().then((data) => {
         if (data.weather[0].main.toLowerCase() === 'clear'){
-            container.style.backgroundImage = `url('${weatherImages.clear}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.clear}')`;
         } else if (data.weather[0].main.toLowerCase() == 'clouds'){
-            container.style.backgroundImage = `url('${weatherImages.clouds}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.clouds}')`;
         } else if (data.weather[0].main.toLowerCase() === 'rain' || data.weather[0].main === 'drizzle'){
-            container.style.backgroundImage = `url('${weatherImages.rain}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.rain}')`;
         } else if (data.weather[0].main.toLowerCase() === 'thunderstorm'){
-            container.style.backgroundImage = `url('${weatherImages.thunderstorm}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.thunderstorm}')`;
         } else if (data.weather[0].main.toLowerCase() === 'snow'){
-            container.style.backgroundImage = `url('${weatherImages.snow}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.snow}')`;
         } else if (data.weather[0].main.toLowerCase() === 'mist'){
-            container.style.backgroundImage = `url('${weatherImages.mist}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.mist}')`;
         } else {
-            container.style.backgroundImage = `url('${weatherImages.clear}')`;
+            container.style.backgroundImage = `${whiteOverlay}, url('${weatherImages.clear}')`;
         } 
     })
 }
