@@ -4,18 +4,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-div { 
-    margin: 7px;
-}
-
-.outer-container {
-    display: grid;
-    grid-template-columns: 35% 65%;
-    text-align: center;
-    margin-top: 100px;
-    height: 300px;
-}
-
 header {
     display: flex;
     flex-direction: column;
@@ -33,6 +21,21 @@ main {
     align-items: center;
 }
 
+input[placeholder] {
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: rgba(65, 105, 225, 0.185) 2px solid;
+}
+
+.outer-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    text-align: center;
+    margin-top: 100px;
+    height: 300px;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -41,11 +44,8 @@ main {
     background-color:rgba(255, 255, 255, 0.4);
 }
 
-input[placeholder] {
-    padding: 5px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    border: rgba(65, 105, 225, 0.185) 2px solid;
+.weather-desc { 
+    margin: 7px;
 }
 
 @media (max-width:650px) {
